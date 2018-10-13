@@ -22,11 +22,85 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#root {
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Arial";
+}
+
+.search-bar {  
+  height: 56px;
+  background: #24aae1;
+  text-align: center;
+}
+
+input {
+  outline: none;
+  width: 50%;
+  padding: 10px;  
+  border: none;
+  top: 16%;
+  font-size: 14px;
+  position: relative;
+}
+
+button {
+outline: none;
+padding: 10px 20px;
+background: white;
+color : #24aae1;
+top: 16%;
+font-size: 14px;
+position: relative;
+}
+
+.busy {
+  opacity: 0.2;
+}
+
+
+ul {
+  padding: 0px;
+  list-style: none;
+}
+
+.list-item {
+border: 1px solid lightgray;
+width: 40%;
+float: left;
+margin: 10px;
+padding: 16px;
+text-align: left;
+cursor: pointer;
+}
+
+.blue-text {
+font-weight: bold;
+color: #24aae1;
+font-weight: 18px;
+}
+
+.wrapper {
+width: 1024px;
+margin: 50px auto;
+display: inline-block;
+}
+
+.profile {
+width: 25%;
+float: left;
+}
+
+.profile img {
+width: 200px;
+padding: 30px 10px;
+}
+
+.repo-container {
+float: left;
+width: 74%;
+}
+
+.repo-list span {
+padding: 5px 0;
 }
