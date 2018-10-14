@@ -22,10 +22,10 @@ const RepoListElement = ({ repos }) => {
       return null;
     }
     const renderList = () =>
-      repos.map(repo => {
+      repos.map((repo, ind) => {
         return (
           <div
-            key={repo.stars}
+            key={ind}
             className="list-item"
             onClick={() => window.open(repo.url, "_blank")}>
             <span className="blue-text">{repo.name}</span>
@@ -36,14 +36,14 @@ const RepoListElement = ({ repos }) => {
               <span className="red-text"> None </span>
             )}
             <br/>
-            {repo.stars !== null ? (
+            {/* {repo.stars !== null ? (
               <span className="blue-text"> {repo.stars}</span>
             ) : (
               <span className="red-text"> None </span>
-            )}
+            )} */}
           </div>
         );
-      });
+    });
   
     return (
         <div className="repo-container">

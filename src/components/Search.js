@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+// import { searchAtionCreator } from '../actions/actionCreators'
+
 import { get } from '../utils/request'
 import { setBusy, storeResult } from '../actions/actions'
 
@@ -24,6 +26,7 @@ class Search extends Component {
     if(this.props.busy) {
       return
     }
+    // -> code before useing redux-think  
     this.props.dispatch(setBusy(true))
     get(`https://github-user.now.sh?username=${this.state.userName}`)
     .then(data => {
@@ -31,6 +34,8 @@ class Search extends Component {
       console.log(data)
       this.props.dispatch(storeResult(data.data))
     })
+    // -> code with useing redux-thunk but we have addotional layer (file -> actionCreators)
+    // this.props.dispatch(searchAtionCreator(this.state.userName))
   }
 
   render() {
